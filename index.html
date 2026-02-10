@@ -39,14 +39,16 @@
   <script>
     const container = document.getElementById('confetti-container');
     const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
-    for (let i = 0; i < 50; i++) {
-      const confetti = document.createElement('div');
-      confetti.classList.add('confetti');
-      confetti.style.width = Math.random() * 10 + 5 + 'px';
-      confetti.style.height = Math.random() * 10 + 5 + 'px';
-      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      confetti.style.left = Math.random() * 100 + '%';
-      container.appendChild(confetti);
+    while(true){
+      if (Math.random>0.5){
+          const confetti = document.createElement('div');
+          confetti.classList.add('confetti');
+          confetti.style.width = Math.random() * 10 + 5 + 'px';
+          confetti.style.height = Math.random() * 10 + 5 + 'px';
+          confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = Math.random() * 100 + '%';
+          container.appendChild(confetti);
+      }
     }
   </script>
 </body>
